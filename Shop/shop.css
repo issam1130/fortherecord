@@ -1,0 +1,188 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Yanone Kaffeesatz", sans-serif;
+  font-weight: 600;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #fff;
+  border-bottom: 1px solid #ddd;
+  position: relative;
+  z-index: 2;
+}
+
+.logo-container {
+  display: flex;
+  gap: 5px;
+}
+
+.record-logo {
+  height: 50px;
+  animation: spin 4s linear infinite;
+}
+
+.logo {
+  height: 40px;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.navbar {
+  flex-grow: 1;
+  text-align: center;
+}
+
+.navbar a {
+  margin: 0 15px;
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+.navbar a:hover {
+  color: #db4a2b;
+}
+
+.icon-container {
+  display: flex;
+  gap: 40px;
+}
+
+.icon-container a {
+  color: #2bbcdb;
+  font-size: 24px;
+}
+
+.icon-container a:hover {
+  color: #db4a2b;
+}
+
+body {
+  background-color: #a1a1a1;
+  background-image: url("background/albums background.jpg");
+  background-repeat: repeat-x;
+  background-size: auto 100%;
+  animation: scrollBackground 20s linear infinite;
+  background-attachment: fixed;
+}
+
+@keyframes scrollBackground {
+  from { background-position: 0 0; }
+  to { background-position: -100% 0; }
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+  margin: 4rem;
+  justify-content: center;
+}
+
+.grid-item {
+  background: rgba(255, 255, 255, 0.918);
+  padding: 20px;
+  text-align: center;
+  border: 1px solid #333;
+  border-radius: 10px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  color: #333;
+}
+
+.grid-item img {
+  max-width: 80%;
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px;
+}
+
+h1, h2, h3 {
+  text-align: left;
+  margin: 0.8rem;
+}
+
+p {
+  text-align: right;
+  font-size: 3rem;
+}
+
+.addtocart {
+  width: 80%;
+  height: 5rem;
+  background-color: #bdeffa;
+  font-size: 1.4rem;
+  text-decoration: none;
+  color: #333;
+  border: 1px solid black;
+  padding: 1rem;
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px;
+}
+
+.addtocart:hover {
+  background-color: #db4a2b;
+}
+
+.grid-item:hover {
+  transform: scale(1.1);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  outline: 2px solid #db4a2b;
+}
+
+.grid-item div {
+  position: relative;
+}
+
+.grid-item span {
+  position: absolute;
+  top: 10px;
+  left: 50px;
+  background-color: rgba(0, 0, 0, 0.7);
+  color: white;
+  padding: 5px;
+  font-size: 1rem;
+  border-radius: 5px;
+}
+
+footer {
+  text-align: center;
+  color: white;
+  padding: 10px;
+  font-size: 1.5rem;
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    display: flex;
+    position: absolute;
+    bottom: 0;
+    justify-content: center;
+  }
+
+  header {
+    height: 150px;
+  }
+
+  .grid-container {
+    grid-template-columns: 1fr;
+  }
+
+  body {
+    animation: scrollBackground 50s linear infinite;
+  }
+}
+
+@media (max-width: 1300px) and (min-width: 768px) {
+  .grid-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

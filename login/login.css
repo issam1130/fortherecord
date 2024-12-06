@@ -1,0 +1,203 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Yanone Kaffeesatz", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #fff;
+  border-bottom: 1px solid #ddd;
+  position: relative;
+  z-index: 2;
+}
+
+.logo-container {
+  display: flex;
+  gap: 5px;
+}
+
+.record-logo {
+  height: 50px;
+  animation: spin 4s linear infinite;
+}
+
+.logo {
+  height: 40px;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.navbar {
+  flex-grow: 1;
+  text-align: center;
+  z-index: 1;
+}
+
+.navbar a {
+  margin: 0 15px;
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+.navbar a:hover {
+  color: #db4a2b;
+}
+
+.icon-container {
+  display: flex;
+  gap: 40px;
+}
+
+.icon-container a {
+  color: #2bbcd2;
+  font-size: 24px;
+}
+
+.icon-container a:hover {
+  color: #db4a2b;
+}
+
+body {
+  background-color: #a1a1a1;
+  background-image: url("img/background.jpg");
+  background-repeat: repeat-x;
+  background-size: auto 100%;
+  animation: scrollBackground 20s linear infinite;
+  background-attachment: fixed;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  margin: 0;
+}
+
+main {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.login-container {
+  background-color: #fff;
+  padding: 20px 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  width: 300px;
+}
+
+h2 {
+  margin-bottom: 20px;
+  font-size: 24px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  margin-top: 10px;
+  text-align: left;
+}
+
+input {
+  padding: 10px;
+  margin: 5px 0;
+  border: 1px solid #2bbcd2;
+  border-radius: 5px;
+}
+
+button {
+  margin-top: 20px;
+  padding: 10px;
+  background-color: #2bbcd2;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #db4a2b;
+}
+
+.forgot-password,
+.guest {
+  display: block;
+  margin-top: 15px;
+  color: #2bbcd2;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.forgot-password:hover,
+.guest:hover {
+  text-decoration: underline;
+}
+
+footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  color: white;
+  z-index: 2;
+  padding: 10px;
+  font-size: 1.5rem;
+}
+
+@keyframes scrollBackground {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: -100% 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    display: flex;
+    bottom: 0;
+    position: absolute;
+    left: 0;
+    right: 0;
+    justify-content: center;
+  }
+
+  header {
+    height: 150px;
+  }
+
+  body {
+    background-size: auto 100vh;
+    
+  }
+}
+
+@media (max-width: 1300px) and (min-width: 768px) {
+  .grid-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, auto);
+    gap: 30px;
+  }
+}
