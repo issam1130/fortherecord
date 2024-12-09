@@ -167,14 +167,32 @@ footer {
 }
 
 @media (max-width: 768px) {
+  header {
+    position: relative;
+    height: 150px;
+  }
   .navbar {
     display: flex;
+    bottom: 0;
+    position: absolute;
+    left: 0;
+    right: 0;
     justify-content: center;
   }
 
-  header {
+  .logo-container {
     height: 150px;
+    justify-content: center;
+    display: flex;
+    align-items: center;
   }
+
+ 
+
+
+
+
+ 
 
   iframe {
     max-width: 350px;
@@ -202,4 +220,7 @@ footer {
   main {
     height: 100vh;
   }
+  
 }
+
+

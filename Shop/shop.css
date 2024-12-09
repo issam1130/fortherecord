@@ -161,11 +161,17 @@ footer {
 }
 
 @media (max-width: 768px) {
+  header {
+    position: relative;
+  }
   .navbar {
     display: flex;
     position: absolute;
     bottom: 0;
     justify-content: center;
+    align-items: center;
+    left: 0;
+    right: 0;
   }
 
   header {
@@ -176,9 +182,6 @@ footer {
     grid-template-columns: 1fr;
   }
 
-  body {
-    animation: scrollBackground 50s linear infinite;
-  }
 }
 
 @media (max-width: 1300px) and (min-width: 768px) {
